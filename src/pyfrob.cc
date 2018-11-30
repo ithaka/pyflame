@@ -101,10 +101,9 @@ PyAddresses Addrs(pid_t pid, Namespace *ns, PyABI *abi) {
     return AddressesFromLibPython(pid, libpython, ns, abi);
   }
   // A process like uwsgi may use dlopen() to load libpython... let's just guess
-  // that the DSO is called libpython2.7.so
+  // that the DSO is called libpython3.4m.so.1.0
   //
-  // XXX: this won't work if the embedding language is Python 3
-  return AddressesFromLibPython(pid, "libpython2.7.so", ns, abi);
+  return AddressesFromLibPython(pid, "libpython3.4m.so.1.0", ns, abi);
 }
 }  // namespace
 

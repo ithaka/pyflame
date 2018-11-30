@@ -21,7 +21,7 @@
 #include "./symbol.h"
 
 // Maximum number of times to retry checking for Python symbols when -p is used.
-#define MAX_ATTACH_RETRIES 1
+#define MAX_ATTACH_RETRIES 500
 
 // Maximum number of times to retry checking for Python symbols when -t is used.
 #define MAX_TRACE_RETRIES 50
